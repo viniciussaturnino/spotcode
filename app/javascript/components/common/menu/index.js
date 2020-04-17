@@ -39,7 +39,7 @@ const Menu = () => {
         <Fragment>
             <Navbar color="dark">
                 <Container>
-                    <ColumnsFullWidth classname='is-mobile'>
+                    <ColumnsFullWidth className='is-mobile'>
                         <Columns.Column desktop={{size: 2}} mobile={{size: 5}}>
                             <img src={logoImage} className='image'/>
                         </Columns.Column>
