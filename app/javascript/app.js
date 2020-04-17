@@ -2,11 +2,15 @@ import React, { Fragment } from 'react'
 import 'react-bulma-components/dist/react-bulma-components.min.css'
 import { Button } from 'react-bulma-components'
 import 'app.scss'
+import Routes from './routes'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 const App = () => {
     return(
         <Fragment>
-            <Button color='primary'>Teste</Button>
+            <BrowserRouter>
+                <Routes/>
+            </BrowserRouter>
         </Fragment>
     )
 }
