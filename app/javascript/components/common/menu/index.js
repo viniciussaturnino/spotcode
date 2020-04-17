@@ -14,7 +14,7 @@ const ColumnsFullWidth = styled(Columns)`
 const Menu = () => {
     return (
         <Fragment>
-            <Navbar color="dark">
+            <Navbar color="black">
                 <Container>
                     <ColumnsFullWidth classname='is-mobile'>
                         <Columns.Column desktop={{size: 2}} mobile={{size: 5}}>
