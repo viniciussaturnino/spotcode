@@ -13,7 +13,7 @@ const Musics = (props) => {
 
     useEffect(() => {
         setSongs(props.songs.map((song, key) =>
-            <Music song={song} playing={playing.id == song.id} setPlaying={setPlaying} key={key} artist_name={props.artist_name}/>
+            <Music song={song} playing={playing.id == song.id} setPlaying={setPlaying} key={key}/>
         ))
     }, [props.songs, playing])
 
