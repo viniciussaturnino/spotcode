@@ -6,7 +6,7 @@ import AlbumScreen from './screens/album'
 import SearchScreen from './screens/search'
 import { Switch, Route } from 'react-router-dom'
 
-const Routes = () => (
+const Routes = (props) => (
     <Switch>
         <Route exact path='/' component={HomeScreen}/>
         <Route exact path='/discovery' component={DiscoveryScreen}/>
