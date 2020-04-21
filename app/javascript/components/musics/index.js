@@ -32,9 +32,8 @@ const Musics = (props) => {
         <Fragment>
             <Columns className='is-mobile is-centered'>
                 <Columns.Column desktop={{size: 2}} mobile={{size: 12}} className='has-text-centered'>
-                    <PlaySequenceButton className='is-medium' color='primary' outlined>
-                            Tocar Aleatoriamente
-                    </PlaySequenceButton>
+                    <PlaySequenceButton className='is-medium button is-rounded' color='success'>Shuffle Play</PlaySequenceButton>
+                            
                     <audio controls ref={AudioRef}>
                         <source src={playing.file_url}/>
                     </audio>
