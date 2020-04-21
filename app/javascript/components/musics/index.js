@@ -65,7 +65,7 @@ const Musics = (props) => {
                     onClick={() => SwitchRandom()}>
                         {playRandom == true ? 'Stop' : 'Suffle Play'}
                     </PlaySequenceButton>     
-                    <audio controls ref={AudioRef}>
+                    <audio controls ref={AudioRef} onEnded={() => NextSong()}>
                         <source src={playing.file_url}/>
                     </audio>
                 </Columns.Column>
