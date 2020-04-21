@@ -63,7 +63,7 @@ const Musics = (props) => {
                     className='is-medium button is-rounded'
                     color='success'
                     onClick={() => SwitchRandom()}>
-                        Shuffle Play
+                        {playRandom == true ? 'Stop' : 'Suffle Play'}
                     </PlaySequenceButton>     
                     <audio controls ref={AudioRef}>
                         <source src={playing.file_url}/>
