@@ -11,6 +11,28 @@ const Musics = (props) => {
     const [songs, setSongs] = useState([])
     const [playing, setPlaying] = useState([])
     const AudioRef = useRef()
+    const [playRandom, setPlayRandom] = useState(false);
+
+    const NextSong = () => {
+        if(playRandom) {
+            let index = Math.floor(Math.random() * props.songs.length);
+            setPlaying(props.songs[index]);
+        } else
+            setPlaying([]);
+    }
+
+    const SwitchRandom = () => {
+        if(playRandom) {
+            setPlayRandom(false);
+            setPlaying([]);
+        } else
+            setPlayRandom(true);
+    }
+
+    useEffect(() => {
+        if(playRandom)
+            NextSong();
+    }, [playRandom]);
 
     useEffect(() =>{
         if(AudioRef.current != null){
@@ -24,7 +46,12 @@ const Musics = (props) => {
 
     useEffect(() => {
         setSongs(props.songs.map((song, key) =>
-            <Music song={song} playing={playing.id == song.id} setPlaying={setPlaying} key={key}/>
+            <Music
+                song={song}
+                playing={playing.id == song.id}
+                setPlaying={setPlaying}
+                key={key}
+                artist_name={props.artist_name}/>
         ))
     }, [props.songs, playing])
 
@@ -34,7 +61,8 @@ const Musics = (props) => {
                 <Columns.Column desktop={{size: 2}} mobile={{size: 12}} className='has-text-centered'>
                     <PlaySequenceButton
                     className='is-medium button is-rounded'
-                    color='success'>
+                    color='success'
+                    onClick={() => SwitchRandom()}>
                         Shuffle Play
                     </PlaySequenceButton>     
                     <audio controls ref={AudioRef}>
