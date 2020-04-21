@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :favorites
   has_many :recently_heards
+
+  def is_favorite? kind, id
+    self.favorites.where(favoritable_type: kind, favoritable_id: id).present?
+  end
 end
