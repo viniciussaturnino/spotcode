@@ -1,6 +1,6 @@
 class Api::V1::CategoriesController < ApplicationController
     def index
-        @categories = Category.all
+        @categories = Category.all.limit(4)
     end
 
     def show
