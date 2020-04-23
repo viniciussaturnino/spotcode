@@ -13,6 +13,6 @@ const SearchScreen = () => {
             </SectionWrapper>
             <NavbarFooter/>
         </Fragment>
-)
+    )
 }
 export default SearchScreen

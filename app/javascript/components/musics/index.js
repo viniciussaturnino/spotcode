@@ -36,7 +36,7 @@ const Musics = (props) => {
     }, [playRandom]);
 
     useEffect(() =>{
-        if(AudioRef.current != null){
+        if(AudioRef.current !== null){
             AudioRef.current.pause()
             AudioRef.current.load()
             if(playing.id){
@@ -52,8 +52,7 @@ const Musics = (props) => {
                 song={song}
                 playing={playing.id == song.id}
                 setPlaying={setPlaying}
-                key={key}
-                artist_name={props.artist_name}/>
+                key={key}/>
         ))
     }, [props.songs, playing])
 

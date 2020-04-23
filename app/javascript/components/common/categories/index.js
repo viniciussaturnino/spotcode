@@ -21,7 +21,7 @@ const Categories = (props) => {
 
     const categories_list = categories.map((category, key) =>
         <Columns.Column desktop={{size: 3}} mobile={{size: 6}} key={key}>
-            <Image src={category.image_url} onClick={() => props.fetchCategorySearch(category.id)}/>
+            <Image src={category.image_url} onClick={() => props.fetchCategorySearch(category.id)}></ Image>
         </Columns.Column>
     )
 
