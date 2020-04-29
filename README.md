@@ -17,8 +17,8 @@ Essa é uma aplicação web desenvolvida em ruby on rails (backend) e React JS (
     1. Pelo terminal do seu sistema operacional, navegue até a página onde deseja baixar o projeto usando ``` cd ```
     2. Clone esse repositório usando:
         ``` git clone https://github.com/viniciussaturnino/spotcode ```
-    2. Ainda no terminal rode os seguintes comandos em sequência:
+    3. Ainda no terminal rode os seguintes comandos em sequência:
         - ``` yarn install ```
         - ``` bundle install ```
         - ``` yarn start ```
-    3. Após a execução do passo 2, você será redirecionado para uma aba http://localhost:3000/ em seu navegador contendo a aplicação.
+    4. Após a execução do passo 2, você será redirecionado para uma aba http://localhost:3000/ em seu navegador contendo a aplicação.
