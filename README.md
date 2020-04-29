@@ -21,4 +21,4 @@ Essa é uma aplicação web desenvolvida em ruby on rails (backend) e React JS (
         - ``` yarn install ```
         - ``` bundle install ```
         - ``` yarn start ```
-    4. Após a execução do passo 2, você será redirecionado para uma aba http://localhost:3000/ em seu navegador contendo a aplicação.
+    4. Após a execução do passo 3, você será redirecionado para uma aba http://localhost:3000/ em seu navegador contendo a aplicação.
